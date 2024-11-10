@@ -1,5 +1,5 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'http://localhost:5000/api' });
+const API = axios.create({ baseURL: 'https://travel-app-backend-3prh.onrender.com/api' });
 
 export const createTrip = (tripData) => API.post('/trips', tripData);
