@@ -10,7 +10,7 @@ const Home = () => {
 
   const handleSearch = async (data) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/trips', data);
+      const response = await axios.post('https://travel-app-backend-3prh.onrender.com/api/trips', data);
       setTripDetails(response.data);
       navigate('/dashboard', { state: { tripDetails: response.data } });
     } catch (error) {
