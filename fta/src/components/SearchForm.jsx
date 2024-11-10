@@ -40,7 +40,7 @@ const SearchForm = () => {
     const tripDetails = { from, to, departureDate, returnDate, distance, budget };
 
     try {
-      const response = await axios.post('http://localhost:5000/api/trips', tripDetails);
+      const response = await axios.post('https://travel-app-backend-3prh.onrender.com/api/trips', tripDetails);
       console.log('Trip saved:', response.data);
       navigate('/dashboard', { state: { tripDetails: response.data } });
     } catch (error) {
